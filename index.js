@@ -151,7 +151,12 @@ function renderPlants(plants) {
   productsGrid.innerHTML = plants
     .map(
       (p) => `
-    <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition">
+    <div 
+  <div 
+  class="bg-white rounded-lg shadow-md overflow-hidden transform transition duration-500 hover:scale-105 hover:shadow-greenGlow opacity-0 animate-fadeIn"
+>
+
+    >
       <img
         src="${p.image || 'https://via.placeholder.com/300x200?text=Tree'}"
         alt="${escapeHtml(p.name || 'Tree')}"
@@ -177,7 +182,8 @@ function renderPlants(plants) {
           data-id="${p.id}"
           data-name="${escapeHtml(p.name)}"
           data-price="${p.price || 500}"
-          class="w-full bg-green-600 text-white py-2 rounded hover:bg-green-700">
+          class="w-full bg-green-600 text-white py-2 rounded hover:bg-red-400 transition duration-300"
+        >
           Add to Cart
         </button>
       </div>
@@ -185,6 +191,7 @@ function renderPlants(plants) {
     )
     .join('');
 }
+
 
 /* ========== Cart ========== */
 function addToCart(id, name, price) {
@@ -304,3 +311,12 @@ function escapeHtml(str = '') {
   };
   return String(str).replace(/[&<>"']/g, (m) => map[m]);
 }
+
+
+  // Toggle Mobile Menu
+  const menuBtn = document.getElementById("menu-btn");
+  const mobileMenu = document.getElementById("mobile-menu");
+
+  menuBtn.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+  });

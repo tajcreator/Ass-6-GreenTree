@@ -30,3 +30,19 @@
                 grid-template-columns: repeat(3, 1fr);
             }
         }  
+
+        /* hover option for card */
+
+          @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .animate-fadeIn {
+    animation: fadeIn 0.7s ease forwards;
+  }
+
+
+    .hover\:shadow-greenGlow:hover {
+    box-shadow: 0 8px 20px rgba(13, 180, 74, 0.646); /* light green glow */
+  }
