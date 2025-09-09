@@ -1,0 +1,6 @@
+ 
+.tree-input::placeholder {
+  font-weight:500;
+  font-size: large;
+  color: rgb(24, 22, 22);  
+}

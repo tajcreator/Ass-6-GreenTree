@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Choose Your Trees</title>
+    <link rel="stylesheet" href="style.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
@@ -130,13 +131,13 @@
     <!--type for a About Campaign Section -->
     <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">About Our Campaign</h2>
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">About The Campaign</h2>
             <div class="flex flex-col lg:flex-row items-center gap-12">
                 <div class="lg:w-1/2">
                     <img src="assets/about.png">
                 </div>
                 <div class="lg:w-1/2">
-                    <h3 class="text-2xl font-semibold mb-4 text-gray-800">Making a Difference Together</h3>
+           
                     <p class="text-gray-600 mb-4">Green Earth is a global tree plantation initiative dedicated to fighting climate change. Since our start, we’ve planted over 500,000 trees worldwide. By joining our campaign, you help restore forests, create habitats for wildlife, and combat global warming.</p>
                    
                     <ul class="space-y-2 text-gray-600">
@@ -173,7 +174,69 @@
         </div>
     </section>
 
-   
+     <!-- Plant a Tree Section -->
+  <section class="py-16 bg-green-800">
+  <div class="max-w-3xl mx-auto px-4">
+    <h2 class="text-3xl font-bold text-center mb-8 text-white">Plant a Tree Today</h2>
+    <form class="bg-green-700 p-8 rounded-lg space-y-6">
+      
+      <!-- Full Name -->
+      <div>
+        <label class="block text-sm font-medium text-gray-700 mb-2"> </label>
+        <input type="text" placeholder="Your name"
+               class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500" />
+      </div>
+
+      <!-- Email -->
+      <div>
+        <label class="block text-sm font-medium text-gray-700 mb-2"> </label>
+        <input type="email" placeholder="Your Email Address"
+               class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500" />
+      </div>
+
+      <!-- Number of Trees -->
+      <div>
+        <label class="block text-sm font-medium text-gray-700 mb-2"> </label>
+        <input type="number" placeholder="Number of Trees" min="1" value="1"
+  class="tree-input w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500" />
+
+      </div>
+
+      <!-- Submit button -->
+      <button type="submit" class="w-full bg-yellow-400 text-green-700 py-3 rounded-full font-semibold hover:bg-green-700">
+       Donate Now
+      </button>
+
+    </form>
+  </div>
+</section>
+
+
+
+    <!-- Footer -->
+    <footer class="bg-green-900 text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p>&copy; © 2025 Green Earth. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Modal -->
+    <div id="treeModal" class="hidden fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
+        <div class="bg-white rounded-lg max-w-2xl w-full max-h-screen overflow-y-auto">
+            <div class="p-6">
+                <div class="flex justify-between items-center mb-4">
+                    <h2 id="modalTitle" class="text-2xl font-bold text-gray-800"></h2>
+                    <button id="closeModal" class="text-gray-500 hover:text-gray-700">
+                        <i class="fas fa-times text-xl"></i>
+                    </button>
+                </div>
+                <div id="modalContent">
+                  
+                </div>
+            </div>
+        </div>
+    </div>
+
 
   <script src="index.js"></script>
 
