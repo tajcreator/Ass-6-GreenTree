@@ -156,7 +156,7 @@ function renderPlants(plants) {
   class="bg-white rounded-lg shadow-md overflow-hidden transform transition duration-500 hover:scale-105 hover:shadow-greenGlow opacity-0 animate-fadeIn"
 >
 
-    >
+    
       <img
         src="${p.image || 'https://via.placeholder.com/300x200?text=Tree'}"
         alt="${escapeHtml(p.name || 'Tree')}"
